@@ -2,6 +2,32 @@ var http = require("http"),
   fs = require("fs"),
   url = require("url"),
   PORT = process.env.PORT || 7777;
+// PORT = 8080,
+mysql = require("mysql");
+
+// Create the connection
+
+// const con = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   port: "8889",
+//   password: "root",
+//   database: "demodb",
+// });
+
+// Connect to the database
+
+// con.connect(function (err) {
+//   if (err) throw err;
+//   console.log("Connected to the database");
+//   // Create table
+//   var sql =
+//     "CREATE TABLE customers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), email VARCHAR(255))";
+//   con.query(sql, function (err, result) {
+//     if (err) throw err;
+//     console.log("Table has been created...");
+//   });
+// });
 
 http
   .createServer(function (req, res) {

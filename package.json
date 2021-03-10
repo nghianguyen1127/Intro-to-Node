@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/nghianguyen1127/Intro-to-Node/issues"
   },
-  "homepage": "https://github.com/nghianguyen1127/Intro-to-Node#readme"
+  "homepage": "https://github.com/nghianguyen1127/Intro-to-Node#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
