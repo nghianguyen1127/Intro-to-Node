@@ -7,27 +7,26 @@ mysql = require("mysql");
 
 // Create the connection
 
-// const con = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   port: "8889",
-//   password: "root",
-//   database: "demodb",
-// });
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  port: "8889",
+  password: "root",
+  database: "demodb",
+});
 
 // Connect to the database
 
-// con.connect(function (err) {
-//   if (err) throw err;
-//   console.log("Connected to the database");
-//   // Create table
-//   var sql =
-//     "CREATE TABLE customers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), email VARCHAR(255))";
-//   con.query(sql, function (err, result) {
-//     if (err) throw err;
-//     console.log("Table has been created...");
-//   });
-// });
+con.connect(function (err) {
+  if (err) throw err;
+  console.log("Connected to the database");
+  // After Table
+  var sql = "CREATE DATABASE demodb";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Created database...");
+  });
+});
 
 http
   .createServer(function (req, res) {
